@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucky Associates</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f3f4f6;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .login-box, .content {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+    .login-box input {
+      width: 80%;
+      padding: 10px;
+      margin-top: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .login-box button {
+      margin-top: 20px;
+      background: #e53935;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .login-box button:hover {
+      background: #b71c1c;
+    }
+    .login-box p#error {
+      color: red;
+      display: none;
+      margin-top: 10px;
+    }
+    .content header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+    .content header img {
+      height: 60px;
+      width: auto;
+    }
+    .content header h1 {
+      font-size: 1.5em;
+      color: #e53935;
+    }
+    .content .links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .content a.button {
+      background: #e53935;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    .content a.button:hover {
+      background: #b71c1c;
+    }
+    footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box" id="login-box">
+    <h2>🔒 Enter Password</h2>
+    <input type="password" id="password" placeholder="Enter password">
+    <button onclick="checkPassword()">Login</button>
+    <p id="error">Incorrect password!</p>
+  </div>
+
+  <div class="content" id="content" style="display:none;">
+    <header>
+      <h1>Lucky Associates</h1>
+      <img src="YOUR_LOGO_URL_HERE" alt="Lucky Associates Logo">
+    </header>
+
+    <div class="links">
+      <a href="https://forms.zohopublic.in/UBISL/form/FRESHLEAD/formperma/Z-jWYxdfrZuM2OklZ_KhIM_5fzL6knU6KBC79zLSwjs" target="_blank" class="button">Enter Your Lead</a>
+      <a href="https://forms.zohopublic.in/UBISL/report/LUCKYASSOCIATES/reportperma/Yr8ZRdSH0Tb8PSVVzgnO3ShxA8l8uxUKQnhZQI1wGJg" target="_blank" class="button">Track Your Leads</a>
+      <a href="https://forms.zohopublic.in/UBISL/form/UNIONPARICHAYA/formperma/gJ1kro4ylbCfcq8j4QMTBbuLrNweN-It2R9qZI-Guc8" target="_blank" class="button">New Contacts</a>
+      <a href="https://forms.zohopublic.in/UBISL/report/LUCKYASSOCIATESCONTACTS/reportperma/jwioR8vot7NPFj6tgF6Dd7eBotwpUnHt28wSW_8FTkU" target="_blank" class="button">Access Contacts</a>
+    </div>
+
+    <footer>
+      &copy; 2025 Lucky Associates. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const pw = document.getElementById('password').value;
+      const correct = "Lucky2025";  // <-- Replace with your password
+      if (pw === correct) {
+        document.getElementById('login-box').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+      } else {
+        document.getElementById('error').style.display = 'block';
+      }
+    }
+  </script>
+
+</body>
+</html>
